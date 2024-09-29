@@ -5,6 +5,11 @@ public class LinkedList<T> {
     private No<T> head;
     private Long size;
 
+    /**
+     * Adds an element to the end of the linked list.
+     * 
+     * @param element the element to be added
+     */
     public void addEnd(T element) {
 
         No<T> newNo = new No<>(element);
