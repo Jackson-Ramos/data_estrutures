@@ -1,6 +1,7 @@
 package collections.sequential;
 @SuppressWarnings("unchecked")
-class SequentialList<T> {
+public class SequentialList<T> {
+
 
     private T[] elements;
     private Integer size;

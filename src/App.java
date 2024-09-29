@@ -1,5 +1,11 @@
+import collections.sequential.SequentialList;
+
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+
+        SequentialList<Integer> list = new SequentialList<>();
+
+        list.add(1);
+
     }
 }
