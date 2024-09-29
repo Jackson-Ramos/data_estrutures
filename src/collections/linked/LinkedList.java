@@ -26,8 +26,17 @@ public class LinkedList<T> {
         size++;
     }
 
-    public void  addStart(T element) {
-        No<T> newNo = new No<>(element);
 
+    /**
+     * Adds an element to the start of the linked list.
+     * 
+     * @param element the element to be added
+     */
+    public void addStart(T element) {
+        No<T> newNo = new No<>(element);
+        newNo.setNext(head);
+        head = newNo;
+        size++;
+    }
 
 }
