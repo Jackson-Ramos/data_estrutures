@@ -6,6 +6,6 @@ public class App {
         SequentialList<Integer> list = new SequentialList<>();
 
         list.add(1);
-
+        
     }
 }
