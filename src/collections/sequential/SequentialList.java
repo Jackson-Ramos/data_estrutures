@@ -52,4 +52,45 @@ public class SequentialList<T> {
         this.elements[size] = element;
         this.size++;
     }
+
+    public T get(int index) {
+        return this.elements[index];
+    }
+
+    public Integer size() {
+        return this.size;
+    }
+
+    /**
+     * Checks if the list is empty.
+     *
+     * @return true if the list is empty, false otherwise
+     */
+    public Boolean isEmpty() {
+        return this.size == 0;
+    }
+
+    /**
+     * Removes the element at the specified index from the list.
+     *
+     * Shifts any subsequent elements to the left (subtracts one from their indices).
+     * Returns the element that was removed from the list.
+     *
+     * @param index the index of the element to be removed
+     * @return the element removed from the list
+     */
+    public T remove(int index) {
+        T element = this.elements[index];
+        T[] newElements = (T[]) new Object[this.elements.length];
+        for (int i = 0; i < this.elements.length; i++) {
+            if (i < index) {
+                newElements[i] = this.elements[i];
+            } else if (i > index) {
+                newElements[i - 1] = this.elements[i];
+            }
+        }
+        this.elements = newElements;
+        this.size--;
+        return element;
+    }
 }
